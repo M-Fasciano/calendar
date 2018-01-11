@@ -1,0 +1,74 @@
+// Fonts
+
+@mixin font-light {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+};
+
+@mixin font-regular {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+};
+
+@mixin font-bold {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+};
+
+// Breakpoints
+
+@mixin small-phone {
+
+    @media screen and (min-width: $small-phone-width) {
+        @content;
+    }
+
+}
+
+@mixin phone-landscape {
+
+    @media screen and (min-width: $phone-landscape-width) {
+        @content;
+    }
+
+}
+
+@mixin phablet {
+
+    @media screen and (min-width: $phablet-width) {
+        @content;
+    }
+
+}
+
+@mixin tablet {
+
+    @media screen and (min-width: $tablet-width) {
+        @content;
+    }
+
+}
+
+@mixin desktop {
+
+    @media screen and (min-width: $desktop-width) {
+        @content;
+    }
+
+}
+
+@mixin desktop-medium {
+
+    @media screen and (min-width: $desktop-medium-width) {
+        @content;
+    }
+
+}
+
+@mixin desktop-large {
+
+    @media screen and (min-width: $desktop-large-width) {
+        @content;
+    }
+
+}
