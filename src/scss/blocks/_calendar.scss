@@ -1,0 +1,65 @@
+.calendar {
+    font-size: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    &__item {
+        background-color: #71e071;
+        border: 2px solid #221e1f;
+        border-radius: 3px;
+        cursor: pointer;
+        display: block;
+        font-size: 18px;
+        height: 75px;
+        line-height: 75px;
+        position: relative;
+        text-align: center;
+        visibility: visible;
+        width: 75px;
+        display: inline-block;
+        margin-right: 10px;
+        text-align: center;
+
+        &--past {
+            background-color: #cccccc;
+            pointer-events: none;
+        }
+
+        span {
+            pointer-events: none;
+        }
+    }
+
+    .current {
+        background-color: unset;
+        border: 2px solid #ff4747;
+        color: #ff4747;
+
+        &.active {
+            border: 2px solid #221e1f;
+            color: #221e1f;
+        }
+    }
+
+    .active {
+        background-color: #ff4747;
+    }
+
+}
+
+.btn {
+    background-color: #6ae2ff;
+    border-radius: 3px;
+    border: 0;
+    cursor: pointer;
+    margin-top: 30px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    transition: background-color .35s;
+
+    &:hover {
+        background-color: #5fcce6;
+        transition: background-color .35s;
+    }
+}
