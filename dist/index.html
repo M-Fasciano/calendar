@@ -1,0 +1,55 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Single page app - Calendar</title>
+        <meta name="description" content="Calendar">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link href="css/main.min.css" rel="stylesheet">
+	</head>
+	<body>
+
+		<form class="form">
+			<div class="form__wrapper">
+				<legend class="form__heading">Input your email and password.</legend>
+				<input class="form__input" id="txtEmail" type="email" placeholder="Email">
+				<input class="form__input" id="txtPassword" type="password" placeholder="Password">
+			</div>
+	
+			<button id="logIn" class="btn">Log in</button>
+			<button id="register" class="btn">Register</button>
+			<button id="logOut" class="btn btn--hide">Log out</button>
+
+			<div id="errors" class="form__error"></div>
+		</form>
+
+		<div class="wrapper wrapper--hide">
+			<h1>Calendar</h1>
+	
+			<div id="today"></div>
+	
+			<br><br>
+	
+			<ul class="calendar"></ul>
+	
+			<button class="btn js-reset">Reset</button>
+		</div>
+
+		<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+		<script>
+			// Initialize Firebase
+			var config = {
+				apiKey: "AIzaSyDMJQ0sDtD0R7bnLhrw8LlKW3ukvELiisg",
+				authDomain: "calendar-74360.firebaseapp.com",
+				databaseURL: "https://calendar-74360.firebaseio.com",
+				projectId: "calendar-74360",
+				storageBucket: "",
+				messagingSenderId: "539960112290"
+			};
+			
+			firebase.initializeApp(config);
+		</script>
+		<script type="text/javascript" src="js/main.min.js"></script>
+	</body>
+</html>

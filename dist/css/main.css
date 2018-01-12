@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:200,400,500");
+.wrapper--hide { display: none; }
+
+.calendar { font-size: 0; list-style: none; margin: 0; padding: 0; }
+
+.calendar__item { background-color: #71e071; border: 2px solid #221e1f; border-radius: 3px; cursor: pointer; display: block; font-size: 18px; height: 75px; line-height: 75px; position: relative; text-align: center; visibility: visible; width: 75px; display: inline-block; margin-right: 10px; text-align: center; }
+
+.calendar__item--past { background-color: #cccccc; pointer-events: none; }
+
+.calendar__item span { pointer-events: none; }
+
+.calendar .current { background-color: unset; border: 2px solid #ff4747; color: #ff4747; }
+
+.calendar .current.active { border: 2px solid #221e1f; color: #221e1f; }
+
+.calendar .active { background-color: #ff4747; }
+
+.btn { background-color: #6ae2ff; border-radius: 3px; border: 0; cursor: pointer; margin-top: 30px; padding: 10px 20px; text-transform: uppercase; transition: background-color .35s; }
+
+.btn:hover { background-color: #5fcce6; transition: background-color .35s; }
+
+.btn--hide { display: none; }
+
+.form__heading { font-size: 20px; }
+
+.form__wrapper { margin-top: 20px; }
+
+.form__wrapper--hide { display: none; }
+
+.form__input { padding: 9px; display: inline-block; border: 1px solid #ccc; border-radius: 3px; box-sizing: border-box; margin-top: 10px; }
+
+.form__error { color: red; margin-top: 10px; }
+
+.form__error--hide { display: none; }
+
+body, html { width: 100%; height: 100%; font-size: 15px; color: #221e1f; font-family: 'Montserrat', sans-serif; font-weight: 400; }
+
+h1 { font-size: calc(1.5rem + 2vw); color: #221e1f; font-family: 'Montserrat', sans-serif; font-weight: 500; }
+
+@media screen and (min-width: 768px) { h1 { font-size: 3rem; } }
+
+p { line-height: 1.8rem; color: #221e1f; }
+
+a { text-decoration: none; cursor: pointer; font-family: 'Montserrat', sans-serif; font-weight: 200; font-size: 1.2rem; color: inherit; }
+
+body { font-family: 'Lato', sans-serif; }
+
+img { width: 100%; max-width: 100%; height: auto; }
+
+* { box-sizing: padding-box; }
+
+.clearfix::after { visibility: hidden; display: block; font-size: 0; content: ' '; clear: both; height: 0; }

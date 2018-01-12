@@ -1,5 +1,5 @@
 import moment from 'moment';
-import isOutDated from '../utility/helpers';
+import { isOutDated, addClick } from '../utility/helpers';
 
 const calendar = () => {
   const today = moment().format('YYYY-MM-DD');
@@ -12,6 +12,7 @@ const calendar = () => {
   // Insert current date to <div id="today">
   $now.textContent = moment().format('dddd Do MMM YYYY');
 
+  // Insert data to object
   for (let i = 0; i <= 6; i++) {
     const day = moment(weekStart).add(i, 'days').format('Do');
     const year = moment(weekStart).add(i, 'days').format('YYYY');
@@ -31,10 +32,12 @@ const calendar = () => {
     };
   }
 
+  // Loop through object and create a 7 days calendar
   Object.keys(dataObj).map((key) => {
     const targetDate = dataObj[key].dateComparison;
     const isOld = isOutDated(targetDate, today);
 
+    // If day is in the past add grey out the element
     if (isOld) {
       $calendar.innerHTML += `
         <li class="calendar__item calendar__item--past" data-day="${dataObj[key].dayLong}" data-date="${dataObj[key].dateComparison}">
@@ -48,16 +51,7 @@ const calendar = () => {
     }
   });
 
-  const addClick = (element, action) => {
-    const el = document.querySelectorAll(element);
-
-    Array.from(el).forEach((item) => {
-      item.addEventListener('click', () => {
-        action(item);
-      });
-    });
-  };
-
+  // Toggle class active
   const addActive = (element) => {
     element.classList.toggle('active');
   };
@@ -65,15 +59,18 @@ const calendar = () => {
   const elem = document.querySelectorAll('.calendar__item');
   const now = moment().format('dddd Do MMM YYYY');
 
+  // Loop through elements
   Array.from(elem).forEach((item) => {
     const elData = item.getAttribute('data-day');
     const currentDay = now.includes(elData);
     const btn = document.querySelector('.js-reset');
 
+    // Add class current to current day
     if (currentDay === true) {
       item.classList.add('current');
     }
 
+    // Remove class active to all elements
     btn.addEventListener('click', () => {
       item.classList.remove('active');
     });
@@ -86,6 +83,7 @@ const calendar = () => {
     dbDays.update(dataObj);
   };
 
+  // On load add data to firebase
   window.onload = () => {
     addtoDb();
   };
