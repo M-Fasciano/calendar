@@ -45,7 +45,7 @@
     "babel-preset-es2017": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babelify": "^7.3.0",
-    "browser-sync": "^2.29.3",
+    "browser-sync": "^3.0.4",
     "critical": "^7.2.1",
     "del": "^2.2.2",
     "dom-delegate": "^2.0.3",
