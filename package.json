@@ -27,7 +27,7 @@
     "critical": "^7.2.1",
     "fontfaceobserver": "^2.0.8",
     "isomorphic-fetch": "^2.2.1",
-    "lodash": "^4.17.2",
+    "lodash": "^4.17.23",
     "moment": "^2.19.4",
     "qs": "^6.14.1",
     "sw-precache": "^4.3.0",
